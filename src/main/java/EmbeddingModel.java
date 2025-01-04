@@ -41,7 +41,7 @@ public class EmbeddingModel {
         // use the embedding model as the serving mode
         EmbedTextDetails embedTextDetails = EmbedTextDetails.builder()
                 .servingMode(embeddingServingMode)
-                .compartmentId(OCIGenAIEnv.getCompartmentID())
+                .compartmentId(OCIGenAIEnv.getCompartmentId())
                 .inputs(inputs)
                 .truncate(EmbedTextDetails.Truncate.None)
                 .build();

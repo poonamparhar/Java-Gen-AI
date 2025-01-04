@@ -83,7 +83,7 @@ public class ChatModel {
         // and the LLM model info
        ChatDetails details = ChatDetails.builder()
                 .chatRequest(genericChatRequest)
-                .compartmentId(OCIGenAIEnv.getCompartmentID())
+                .compartmentId(OCIGenAIEnv.getCompartmentId())
                 .servingMode(chatServingMode)
                 .build();
        ChatRequest request = ChatRequest.builder()
