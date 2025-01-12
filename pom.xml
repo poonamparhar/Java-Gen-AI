@@ -39,11 +39,6 @@
         </dependency>
         <dependency>
             <groupId>com.oracle.oci.sdk</groupId>
-            <artifactId>oci-java-sdk-addons-sse-support-jersey3</artifactId>
-            <version>3.55.1</version>
-        </dependency>
-        <dependency>
-            <groupId>com.oracle.oci.sdk</groupId>
             <artifactId>oci-java-sdk-generativeaiinference</artifactId>
             <version>3.55.1</version>
         </dependency>

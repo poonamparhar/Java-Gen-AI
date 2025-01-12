@@ -8,12 +8,14 @@
  */
 public class OCIGenAIEnv {
     /**
-     * The base URL of the OCI Generative AI service endpoint.
+     * The OCI Generative AI service is available in several regions.
+     * https://docs.oracle.com/en-us/iaas/Content/generative-ai/overview.htm#regions
+     * Here, we use the Generative AI service endpoint in Chicago region.
      */
     private static final String ENDPOINT = "https://inference.generativeai.us-chicago-1.oci.oraclecloud.com";
 
     /**
-     * The default location of the OCI configuration file.
+     * The location of the OCI configuration file.
      */
     private static final String CONFIG_LOCATION = "~/.oci/config";
 
@@ -23,7 +25,7 @@ public class OCIGenAIEnv {
     private static final String CONFIG_PROFILE = "DEFAULT";
 
     /**
-     * Returns the compartment ID that has the required policies setup for accessing OCI GenAI
+     * Returns the compartment ID that has the required policies setup for accessing OCI Gen AI.
      * Compartment ID is set in an environment variable COMPARTMENT_ID
      *
      * @return the compartment ID as a string
