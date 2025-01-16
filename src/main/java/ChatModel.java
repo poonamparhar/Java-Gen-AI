@@ -3,7 +3,6 @@ import com.oracle.bmc.generativeaiinference.model.BaseChatResponse;
 import com.oracle.bmc.generativeaiinference.model.ChatChoice;
 import com.oracle.bmc.generativeaiinference.model.ChatContent;
 import com.oracle.bmc.generativeaiinference.model.ChatDetails;
-import com.oracle.bmc.generativeaiinference.model.CohereChatResponse;
 import com.oracle.bmc.generativeaiinference.model.GenericChatRequest;
 import com.oracle.bmc.generativeaiinference.model.GenericChatResponse;
 import com.oracle.bmc.generativeaiinference.model.Message;
@@ -30,7 +29,7 @@ public class ChatModel {
     public ChatModel(GenerativeAiInferenceClient generativeAiInferenceClient) {
         this.generativeAiInferenceClient = generativeAiInferenceClient;
 
-        // use meta.llama-3.1-405b-instruct model vailable in OCI Gen AI
+        // use meta.llama-3.1-405b-instruct model available in OCI Gen AI
         chatServingMode = OnDemandServingMode.builder()
                     .modelId("meta.llama-3.1-405b-instruct")
                     .build();

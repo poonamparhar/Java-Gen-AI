@@ -31,8 +31,7 @@ public class OCIGenAIEnv {
      * @return the compartment ID as a string
      */
     public static String getCompartmentId() {
-        String compartment_id = System.getenv("COMPARTMENT_ID");
-        return compartment_id;
+        return System.getenv("COMPARTMENT_ID");
     }
 
     /**
