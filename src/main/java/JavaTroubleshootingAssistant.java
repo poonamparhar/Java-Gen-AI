@@ -227,10 +227,10 @@ public class JavaTroubleshootingAssistant {
         // GenericChatResponse represents response from llama models
         if (bcr instanceof GenericChatResponse resp) {
             List<ChatChoice> choices = resp.getChoices();
-            List<ChatContent> contents = choices.get(choices.size() - 1)
+            List<ChatContent> contents = choices.getLast()
                     .getMessage()
                     .getContent();
-            ChatContent content = contents.get(contents.size() - 1);
+            ChatContent content = contents.getLast();
             if (content instanceof TextContent textContent) {
                 return textContent.getText();
             }

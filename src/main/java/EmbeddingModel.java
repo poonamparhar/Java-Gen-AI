@@ -6,7 +6,6 @@ import com.oracle.bmc.generativeaiinference.requests.EmbedTextRequest;
 import com.oracle.bmc.generativeaiinference.responses.EmbedTextResponse;
 import dev.langchain4j.data.embedding.Embedding;
 
-import java.util.Collections;
 import java.util.List;
 
 /**
@@ -36,7 +35,7 @@ public class EmbeddingModel {
      * @return a LangChain4j Embedding object representing the generated embedding vector
      */
     public Embedding embedContent(String content) {
-        List<String> inputs = Collections.singletonList(content);
+        List<String> inputs = List.of(content);
         // Build embed text details and request from the input string
         // use the embedding model as the serving mode
         EmbedTextDetails embedTextDetails = EmbedTextDetails.builder()
@@ -51,7 +50,7 @@ public class EmbeddingModel {
         EmbedTextResponse embedTextResponse = generativeAiInferenceClient.embedText(embedTextRequest);
 
         // extract embeddings from the embed text response
-        List<Float> embeddings = embedTextResponse.getEmbedTextResult().getEmbeddings().get(0);
+        List<Float> embeddings = embedTextResponse.getEmbedTextResult().getEmbeddings().getFirst();
         // put the embeddings in a float[]
         int len = embeddings.size();
         float[] embeddingsVector = new float[len];
