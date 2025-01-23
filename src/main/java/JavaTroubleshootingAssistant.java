@@ -148,7 +148,6 @@ public class JavaTroubleshootingAssistant {
                     "context", context
             );
             Prompt prompt = javachat.template.apply(variables);
-            System.out.println(prompt.text());
 
             // send augmented prompt to the chat model
             ChatResponse response = javachat.chatModel.generateResponse(prompt.text());
